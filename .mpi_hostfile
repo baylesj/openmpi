@@ -1,0 +1,6 @@
+# The Hostfile for Open MPI
+#localhost slots=4
+
+# Slaves
+slave1 slots=2
+#slave2 slots=2
