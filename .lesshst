@@ -2,4 +2,6 @@
 .search
 "host
 "-H
+"password
+"pernode
 .shell

@@ -5,7 +5,7 @@
 
 #include "happy.h"
 
-static const int max_value = 2500000;
+static const int max_value = 6000000;
 
 int main(int argc, char **argv) {
 	int i, me, nprocs, namelen;

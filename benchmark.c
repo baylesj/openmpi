@@ -1,11 +1,12 @@
 #include <mpi.h>
+#include <string.h>
 #include <stdio.h>
 #include <sys/time.h>
 #include <unistd.h>
 
 #include "happy.h"
 
-static const int max_value = 2500000;
+static const int max_value = 6000000;
 
 int main(int argc, char **argv) {
 	int i, me, nprocs, namelen;
@@ -19,10 +20,18 @@ int main(int argc, char **argv) {
 
 	// MULTITHREADED BENCHMARK
 	int window = max_value / nprocs;
-	int i_min = window * me;
-	int i_max = window * (me + 1) - 1;
 
 	gettimeofday(&tv1, NULL);
+
+	int i_min = 0;
+	// ratio found experimentally
+	int i_max = max_value * .7;
+
+	if (processor_name[0] == 'u') {
+		i_min = i_max;
+		i_max = max_value;
+	}
+	
 	for (i = i_min; i <= i_max; ++i) {
 		is_happy(i);
 	}

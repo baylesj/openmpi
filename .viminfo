@@ -9,6 +9,9 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
+:w
+:q!
+:q
 
 # Search String History (newest to oldest):
 
@@ -25,7 +28,7 @@
 	export LD_LIBRARY_PATH=/usr/local/lib
 	
 	scp a.out slave1:~
-""1	LINE	0
+"1	LINE	0
 	scp a.out slave1:~
 "2	LINE	0
 	
@@ -35,14 +38,35 @@
 	export LD_LIBRARY_PATH=/usr/local/lib
 "5	LINE	0
 	
+""-	CHAR	0
+	5
 
 # File marks:
-'0  1  0  ~/prep.sh
+'0  8  33  ~/benchmark.c
+'1  1  0  ~/benchmark.c
+'2  1  0  ~/prep.sh
 
 # Jumplist (newest first):
+-'  8  33  ~/benchmark.c
+-'  1  0  ~/benchmark.c
+-'  1  0  ~/prep.sh
+-'  1  0  ~/prep.sh
+-'  1  0  ~/prep.sh
 -'  1  0  ~/prep.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/single_benchmark.c
+	"	8	30
+	^	8	31
+	.	8	31
+	+	8	31
+
+> ~/benchmark.c
+	"	8	33
+	^	8	34
+	.	8	0
+	+	8	0
 
 > ~/run.sh
 	"	2	0
